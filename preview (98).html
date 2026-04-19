@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>obitus</title>
+
+<style>
+body {
+    background: #000;
+    color: #9a0000;
+    font-family: monospace;
+    margin: 0;
+    overflow: hidden;
+}
+
+#text {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+#enter {
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+    color: #cfcfcf;
+}
+
+#enter:hover {
+    color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+<div id="text">
+    <div>signal detected</div>
+    <div id="enter">enter</div>
+</div>
+
+<script>
+document.getElementById("enter").onclick = function() {
+    window.location.href = "https://corpsewoodbooking.github.io/obitus/";
+};
+
+// subtle flicker
+setInterval(() => {
+    document.body.style.opacity = Math.random() > 0.95 ? 0.7 : 1;
+}, 100);
+</script>
+
+</body>
+</html>
